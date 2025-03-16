@@ -17,9 +17,10 @@ public class AstroidPath : MonoBehaviour
     {
         time += speed * Time.deltaTime;
 
-        float x = radius * Mathf.Pow(Mathf.Cos(time), 3);
-        float y = radius * Mathf.Pow(Mathf.Sin(time), 3);
+        float y = radius * Mathf.Pow(Mathf.Cos(time), 3);
+        float z = radius * Mathf.Pow(Mathf.Sin(time), 3);
 
-        transform.position = startPosition + new Vector3(x, y, 0);
+        transform.position = startPosition + new Vector3(0, y, z);
     }
 }
+
