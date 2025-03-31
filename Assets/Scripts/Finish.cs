@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
-    public Color finishColor = Color.green; // Êîë³ð ô³í³øó
+    public Color finishColor = Color.green; // ÃŠÃ®Ã«Â³Ã° Ã´Â³Ã­Â³Ã¸Ã³
 
     private void Start()
     {
@@ -11,15 +11,9 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player") && GlobalStorage.Instance != null) 
         {
             GlobalStorage.Instance.OnLevelComplete();
         }
-
-        if (GlobalStorage.Instance != null)
-        {
-            GlobalStorage.Instance.OnLevelComplete();
-        }
-
     }
 }
