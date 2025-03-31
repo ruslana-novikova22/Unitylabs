@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        GetComponent<Renderer>().material.color = Color.white;
     }
 
     void Update()

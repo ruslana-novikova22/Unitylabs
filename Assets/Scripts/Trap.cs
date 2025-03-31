@@ -11,7 +11,7 @@ public class Trap : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        Debug.Log("Trap.cs запустився!");
+        GetComponent<Renderer>().material.color = Color.black;
     }
 
     void Update()

@@ -444,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f923e210d775547bd5bf1ffaf88943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &239446983
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f923e210d775547bd5bf1ffaf88943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &281392325
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f923e210d775547bd5bf1ffaf88943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &398894162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f923e210d775547bd5bf1ffaf88943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &539034482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1061,7 @@ GameObject:
   - component: {fileID: 539034485}
   - component: {fileID: 539034484}
   - component: {fileID: 539034483}
+  - component: {fileID: 539034487}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Finish
@@ -1153,6 +1158,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539034487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539034482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7088598e3fa5ef14d867849abd616fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &857429334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f923e210d775547bd5bf1ffaf88943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &903433509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f923e210d775547bd5bf1ffaf88943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &1200752105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,7 +2038,11 @@ MonoBehaviour:
   lives: 3
   coinsCollected: 0
   levelTime: 60
+  collisions: 0
+  currentScore: 0
   player: {fileID: 0}
+  playerTransform: {fileID: 0}
+  playerRb: {fileID: 0}
 --- !u!4 &1361401898
 Transform:
   m_ObjectHideFlags: 0

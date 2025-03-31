@@ -13,6 +13,7 @@ public class MovingTrap : MonoBehaviour
     {
         transform.position = pointA;
         direction = (pointB - pointA).normalized;
+        GetComponent<Renderer>().material.color = Color.black;
     }
 
     void Update()

@@ -10,7 +10,8 @@ public class RotatingTrap : MonoBehaviour
 
     void Start()
     {
-        centerPosition = transform.position; // Зберігаємо початкову позицію сфери
+        centerPosition = transform.position; // Зберігаємо початкову позицію
+        GetComponent<Renderer>().material.color = Color.black; // Задаємо колір
     }
 
     void Update()
