@@ -11,16 +11,15 @@ public class PlaneController : MonoBehaviour
 
         // Ïîâîðîòè ë³òàêà
         if (Input.GetKey(KeyCode.W))
-            transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime); // Íàõèë âíèç
+            transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime); 
         if (Input.GetKey(KeyCode.S))
-            transform.Rotate(Vector3.left * turnSpeed * Time.deltaTime); // Íàõèë âãîðó
+            transform.Rotate(Vector3.left * turnSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.A))
-            transform.Rotate(Vector3.up * -turnSpeed * Time.deltaTime); // Ïîâîðîò âë³âî
+            transform.Rotate(Vector3.up * -turnSpeed * Time.deltaTime); 
         if (Input.GetKey(KeyCode.D))
-            transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime); // Ïîâîðîò âïðàâî
+            transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime); 
         if (Input.GetKey(KeyCode.Q))
-            transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime); // Êðåí âë³âî
+            transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime); 
         if (Input.GetKey(KeyCode.E))
-            transform.Rotate(Vector3.back * turnSpeed * Time.deltaTime); // Êðåí âïðàâî
-    }
+            transform.Rotate(Vector3.back * turnSpeed * Time.deltaTime); 
 }
