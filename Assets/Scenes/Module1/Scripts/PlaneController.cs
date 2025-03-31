@@ -2,26 +2,25 @@ using UnityEngine;
 
 public class PlaneController : MonoBehaviour
 {
-    public float speed = 10f;      // Швидкість руху вперед
-    public float turnSpeed = 50f;  // Швидкість поворотів
-
+    public float speed = 10f;      
+    public float turnSpeed = 50f;  
     void Update()
     {
-        // Рух вперед
+        // ГђГіГµ ГўГЇГҐГ°ГҐГ¤
         transform.position += transform.forward * speed * Time.deltaTime;
 
-        // Повороти літака
+        // ГЏГ®ГўГ®Г°Г®ГІГЁ Г«ВіГІГ ГЄГ 
         if (Input.GetKey(KeyCode.W))
-            transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime); // Нахил вниз
+            transform.Rotate(Vector3.right * turnSpeed * Time.deltaTime); // ГЌГ ГµГЁГ« ГўГ­ГЁГ§
         if (Input.GetKey(KeyCode.S))
-            transform.Rotate(Vector3.left * turnSpeed * Time.deltaTime); // Нахил вгору
+            transform.Rotate(Vector3.left * turnSpeed * Time.deltaTime); // ГЌГ ГµГЁГ« ГўГЈГ®Г°Гі
         if (Input.GetKey(KeyCode.A))
-            transform.Rotate(Vector3.up * -turnSpeed * Time.deltaTime); // Поворот вліво
+            transform.Rotate(Vector3.up * -turnSpeed * Time.deltaTime); // ГЏГ®ГўГ®Г°Г®ГІ ГўГ«ВіГўГ®
         if (Input.GetKey(KeyCode.D))
-            transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime); // Поворот вправо
+            transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime); // ГЏГ®ГўГ®Г°Г®ГІ ГўГЇГ°Г ГўГ®
         if (Input.GetKey(KeyCode.Q))
-            transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime); // Крен вліво
+            transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime); // ГЉГ°ГҐГ­ ГўГ«ВіГўГ®
         if (Input.GetKey(KeyCode.E))
-            transform.Rotate(Vector3.back * turnSpeed * Time.deltaTime); // Крен вправо
+            transform.Rotate(Vector3.back * turnSpeed * Time.deltaTime); // ГЉГ°ГҐГ­ ГўГЇГ°Г ГўГ®
     }
 }
