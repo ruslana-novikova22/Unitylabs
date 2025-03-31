@@ -73,13 +73,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftShift))
         {
             isBoosting = true;
+            boostTime = boostDuration; // Встановлюємо таймер
         }
-        else
+
+        if (isBoosting)
         {
-            isBoosting = false;
+            boostTime -= Time.deltaTime; // Зменшуємо час прискорення
+
+            if (boostTime <= 0)
+            {
+                isBoosting = false; // Вимикаємо прискорення, коли таймер сплив
+            }
         }
     }
-
 
 
     void OnCollisionEnter(Collision collision)
