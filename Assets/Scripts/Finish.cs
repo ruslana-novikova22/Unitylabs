@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
-    public Color finishColor = Color.green; // Êîë³ð ô³í³øó
-
+    public Color finishColor = Color.green; 
     private void Start()
     {
         GetComponent<Renderer>().material.color = finishColor;
