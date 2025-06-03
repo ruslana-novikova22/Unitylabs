@@ -7,6 +7,12 @@ TagManager:
   - Ground
   - Coin
   - Trap
+  - Enemy
+  - Field
+  - Swamp
+  - Road
+  - SwampEnemy
+  - FieldEnemy
   layers:
   - Default
   - TransparentFX
