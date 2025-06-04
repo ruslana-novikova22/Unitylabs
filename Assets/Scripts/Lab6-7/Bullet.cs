@@ -1,9 +1,11 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
     private Vector3 direction;
+
+    public GameObject hitEffectPrefab;
 
     public void SetDirection(Vector3 dir)
     {
@@ -17,10 +19,17 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("FieldEnemy") || other.CompareTag("SwampEnemy"))
         {
-            Destroy(other.gameObject); // знищити ворога
-            Destroy(gameObject);       // знищити снаряд
+            if (hitEffectPrefab != null)
+            {
+                GameObject fx = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+                Destroy(fx, 2f);
+            }
+
+            Destroy(other.gameObject); // Р—РЅРёС‰РёС‚Рё РІРѕСЂРѕРіР°
+            Destroy(gameObject);       // Р—РЅРёС‰РёС‚Рё СЃРЅР°СЂСЏРґ
         }
     }
+
 }
